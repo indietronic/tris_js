@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tris.js</title>
+
+    <script type="application/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="application/javascript" src="../js/app.js"></script>
+    <script type="application/javascript" src="../js/controllers/game.js"></script>
+    <script type="application/javascript" src="../js/modules/casella.js"></script>
+    <link href="../bower_components/bootstrap-css/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../js/modules/casella.css" rel="stylesheet" type="text/css">
+    <link href="../views/game.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body class="bg-alternative">
+<div ng-app="trisApp">
+
+    <div class="container" ng-controller="gameController as vm">
+
+        <div class="row marginTop20 text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tris-text">TrisJs</h1>
+            </div>
+        </div>
+
+        <div class="row marginTop20">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                <casella-grid rows-num="{{vm.rows}}" cols-num="{{vm.cols}}" play="vm.play" player-sign="vm.giocatoreInGioco" casella-attuale="vm.casellaAttuale" sign="vm.getCasella"></casella-grid>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 text-left">
+                <div>
+                    <h2 class="tris-text">E' il turno del giocatore {{vm.giocatoreInGioco}} !</h2>
+                </div>
+                <div class="marginTop20" ng-show="vm.pareggio">
+                    <h2 class="tris-text">E' un pareggio!</h2>
+                </div>
+                <div class="marginTop20" ng-show="vm.vittoria">
+                    <h2 class="tris-text">Ha vinto il giocatore {{vm.giocatoreInGioco}} !</h2>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <div ng-show="!vm.play" class="row marginTop20 text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button class="button" ng-click="vm.resetMatch()">Riavvia la Partita!</button>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

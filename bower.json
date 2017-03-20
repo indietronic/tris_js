@@ -1,0 +1,14 @@
+{
+  "name": "trisJs",
+  "authors": [
+    "indietronic <giulianogiannico@gmail.com>"
+  ],
+  "description": "gioco del tris in angularjs",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.4",
+    "bootstrap-css": "^3.3.7"
+  }
+}

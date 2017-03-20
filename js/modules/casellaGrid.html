@@ -1,0 +1,4 @@
+<div class="row" ng-repeat="r in rows">
+    <casella ng-repeat="c in cols" id="{{'casella_' + r + '_' +c}}"  position="{{r + '_' +c}}" player-sign="playerSign" ng-click="conquistaCasella(r, c)" >
+    </casella>
+</div>

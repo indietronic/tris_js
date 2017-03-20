@@ -1,0 +1,34 @@
+.tris-text{
+    color: white;
+}
+
+.bg-alternative{
+    background-color: #518e9b;
+}
+
+
+.marginTop20{
+    margin-top: 20px;
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #227c9b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #438e60
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
